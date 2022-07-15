@@ -78,7 +78,7 @@ atom-text-editor {
   color: @green;
 
   &.syntax--control {
-    color: @ink;
+    color: darken(@cyan, 20%);
     font-weight: bold; // slightly bolder than normal
   }
 
@@ -103,6 +103,10 @@ atom-text-editor {
 
 .syntax--storage {
   color: @blue;
+  &.syntax--type {
+    color: @cyan;
+
+  }
   &.syntax--todo, &.syntax--idea, &.syntax--fixme, &.syntax--hack {
     color: @purple;
     background-color: fade(@light-orange, 10%);
@@ -134,13 +138,13 @@ atom-text-editor {
 }
 
 .syntax--variable {
-  color: @blue;
 
   &.syntax--interpolation {
     color: darken(@blue, 10%);
   }
 
   &.syntax--parameter.syntax--function {
+    color: @blue;
 
   }
 }
@@ -173,6 +177,9 @@ atom-text-editor {
   &.syntax--other.syntax--link {
     color: @red;
   }
+}
+.syntax--meta {
+  color: @ink;
 }
 
 .syntax--punctuation {
@@ -228,6 +235,9 @@ atom-text-editor {
 
     color:@orange;
 
+  }
+  &.syntax--call {
+    color:darken(@orange, 10%);
   }
 }
 
